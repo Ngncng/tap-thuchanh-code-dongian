@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" width="400" height="480">
+  <!-- Helmet outer -->
+  <circle cx="100" cy="70" r="55" fill="#E8F4FC" stroke="#4A90A4" stroke-width="4"/>
+  
+  <!-- Helmet glass / visor -->
+  <ellipse cx="100" cy="72" rx="42" ry="40" fill="#A8D5E5" opacity="0.7"/>
+  
+  <!-- Face -->
+  <circle cx="100" cy="75" r="32" fill="#FFE4C4"/>
+  
+  <!-- Eyes -->
+  <ellipse cx="88" cy="70" rx="8" ry="10" fill="#2C3E50"/>
+  <ellipse cx="112" cy="70" rx="8" ry="10" fill="#2C3E50"/>
+  
+  <!-- Eye highlights -->
+  <circle cx="90" cy="67" r="3" fill="white"/>
+  <circle cx="114" cy="67" r="3" fill="white"/>
+  
+  <!-- Cheeks -->
+  <ellipse cx="78" cy="82" rx="6" ry="4" fill="#FFB6C1" opacity="0.7"/>
+  <ellipse cx="122" cy="82" rx="6" ry="4" fill="#FFB6C1" opacity="0.7"/>
+  
+  <!-- Smile -->
+  <path d="M 90 88 Q 100 98 110 88" fill="none" stroke="#2C3E50" stroke-width="2.5" stroke-linecap="round"/>
+  
+  <!-- Helmet rim -->
+  <ellipse cx="100" cy="115" rx="48" ry="12" fill="#4A90A4"/>
+  
+  <!-- Body / Suit -->
+  <ellipse cx="100" cy="160" rx="40" ry="45" fill="#F5F5F5" stroke="#4A90A4" stroke-width="3"/>
+  
+  <!-- Suit details - chest -->
+  <rect x="85" y="140" width="30" height="20" rx="5" fill="#E0F0F8" stroke="#4A90A4" stroke-width="1.5"/>
+  <circle cx="100" cy="150" r="6" fill="#4A90A4"/>
+  
+  <!-- Arms -->
+  <ellipse cx="55" cy="155" rx="15" ry="25" fill="#F5F5F5" stroke="#4A90A4" stroke-width="2.5" transform="rotate(-20 55 155)"/>
+  <ellipse cx="145" cy="155" rx="15" ry="25" fill="#F5F5F5" stroke="#4A90A4" stroke-width="2.5" transform="rotate(20 145 155)"/>
+  
+  <!-- Hands / gloves -->
+  <circle cx="48" cy="175" r="12" fill="#E8F4FC" stroke="#4A90A4" stroke-width="2"/>
+  <circle cx="152" cy="175" r="12" fill="#E8F4FC" stroke="#4A90A4" stroke-width="2"/>
+  
+  <!-- Legs -->
+  <ellipse cx="80" cy="210" rx="16" ry="28" fill="#F5F5F5" stroke="#4A90A4" stroke-width="2.5"/>
+  <ellipse cx="120" cy="210" rx="16" ry="28" fill="#F5F5F5" stroke="#4A90A4" stroke-width="2.5"/>
+  
+  <!-- Boots -->
+  <ellipse cx="80" cy="230" rx="18" ry="10" fill="#4A90A4"/>
+  <ellipse cx="120" cy="230" rx="18" ry="10" fill="#4A90A4"/>
+  
+  <!-- Backpack / jetpack -->
+  <rect x="130" y="130" width="25" height="40" rx="5" fill="#4A90A4" stroke="#2C5F6E" stroke-width="2"/>
+  <rect x="135" y="135" width="15" height="12" rx="2" fill="#E0F0F8"/>
+  <rect x="135" y="152" width="15" height="12" rx="2" fill="#E0F0F8"/>
+  
+  <!-- Antenna -->
+  <line x1="130" y1="40" x2="145" y2="25" stroke="#4A90A4" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="145" cy="22" r="5" fill="#FF6B6B"/>
+  
+  <!-- Small stars decoration -->
+  <polygon points="30,40 32,46 38,46 33,50 35,56 30,52 25,56 27,50 22,46 28,46" fill="#FFD93D"/>
+  <polygon points="170,50 171.5,54 175.5,54 172.5,57 174,61 170,58.5 166,61 167.5,57 164.5,54 168.5,54" fill="#FFD93D"/>
+</svg>

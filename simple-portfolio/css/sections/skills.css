@@ -1,0 +1,336 @@
+
+/* =====================================================
+   1. SKILLS SECTION - KHU VỰC KỸ NĂNG
+===================================================== */
+
+/* Khung bao bọc toàn bộ khu vực Skills */
+.skills__container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+
+/* =====================================================
+   2. SKILLS GRID - BỐ CỤC CÁC THẺ KỸ NĂNG
+===================================================== */
+
+/* Chia khu vực thành 3 cột và 2 hàng */
+.skills__grid_container {
+    display: grid;
+
+    /* 3 cột, mỗi cột có kích thước tối thiểu 100px */
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+
+    /* 2 hàng, mỗi hàng cao tối thiểu 320px */
+    grid-template-rows: repeat(2, minmax(320px, auto));
+
+    /* Khoảng cách giữa các ô Grid */
+    gap: 12px;
+}
+
+
+/* =====================================================
+   3. SKILLS GRID ITEM HEADER - TIÊU ĐỀ CÁC THẺ
+===================================================== */
+
+.skills__grid_item_header {
+
+    /* Khu vực chứa icon và tiêu đề */
+    & div {
+        display: flex;
+        gap: 12px;
+    }
+
+    /* Tiêu đề của thẻ */
+    & h2 {
+        font-size: var(--h2-font-size);
+        line-height: var(--h2-line-height);
+        font-weight: 600;
+        text-transform: capitalize;
+    }
+
+    /* Đoạn mô tả */
+    & p {
+        margin-top: 12px;
+        color: var(--n-500);
+        max-width: 60ch;
+    }
+}
+
+
+/* =====================================================
+   4. SKILLS GRID ITEM - CÁC THẺ KỸ NĂNG
+===================================================== */
+
+.skills__grid_item {
+    /* Ẩn nội dung vượt ra ngoài khung */
+    overflow: hidden;
+
+    /* Đường viền và bo góc */
+    border: 2px solid var(--p-100);
+    border-radius: 24px;
+
+    /* Màu nền */
+    background-color: var(--p-20);
+
+    /* Khoảng cách bên trong */
+    padding: 2rem;
+
+    /* Hiệu ứng đổ bóng */
+    box-shadow: 0 2px 4px hsla(233, 45%, 20%, 0.1);
+
+
+    /* -------------------------------------------------
+       ITEM 1 - HÌNH ẢNH MÈO
+    ------------------------------------------------- */
+
+    &:nth-child(1) {
+        border: none;
+
+        /* Căn giữa, phủ kín khung và không lặp ảnh */
+        background: url("../../assets/cat1.jpeg") center / cover no-repeat;
+    }
+
+
+    /* -------------------------------------------------
+       ITEM 2 - CÔNG CỤ & CÔNG NGHỆ
+    ------------------------------------------------- */
+
+    &:nth-child(2) {
+        grid-column: span 2;
+
+        /* Sắp xếp nội dung theo chiều dọc */
+        display: flex;
+        flex-direction: column;
+
+        /* Đẩy phần tiêu đề và danh sách icon ra hai phía */
+        justify-content: space-between;
+
+
+        /* Khung bao bọc các danh sách icon */
+        & .icons-list-wrapper {
+            overflow: hidden;
+            margin-top: 8px;
+
+            /* Xếp các danh sách theo chiều ngang */
+            display: flex;
+            gap: 12px;
+
+
+            /* Danh sách thứ nhất chạy sang trái */
+            &:nth-child(1) > .icons-list {
+                animation: move-left 30s linear infinite;
+            }
+
+            /* Danh sách thứ hai chạy sang phải */
+            &:nth-child(2) > .icons-list {
+                animation: move-right 60s linear infinite;
+            }
+        }
+
+
+        /* Danh sách các icon công nghệ */
+        & .icons-list {
+            display: flex;
+            min-width: 100%;
+            gap: 12px;
+
+            /* Không cho danh sách bị co lại */
+            flex-shrink: 0;
+        }
+
+
+        /* Một badge gồm icon và tên công nghệ */
+        & .icon-badges {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            gap: 1.14em;
+            border-radius: 12px;
+            padding: 0.6em 0;
+
+            width: 12em;
+
+            font-weight: 700;
+            font-size: var(--caption-font-size);
+            text-transform: uppercase;
+
+            /* Kích thước hình ảnh công nghệ */
+            & img {
+                height: 2em;
+            }
+        }
+
+
+        /* Badge ở vị trí chẵn */
+        & .icon-badges:nth-child(even) {
+            background: var(--main-gradient-color);
+            color: white;
+        }
+
+
+        /* Badge ở vị trí lẻ */
+        & .icon-badges:nth-child(odd) {
+            background: white;
+            border: 1px solid var(--p-100);
+
+            /* Chữ sử dụng màu gradient */
+            & span {
+                background: var(--main-gradient-color);
+                color: transparent;
+                background-clip: text;
+            }
+        }
+    }
+
+
+    /* -------------------------------------------------
+       ITEM 3 - KỸ NĂNG MỀM
+    ------------------------------------------------- */
+
+    &:nth-child(3) {
+        grid-column: span 2;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+
+        /* Khung chứa các badge và hình ảnh quyển sách */
+        & .softSkills_container {
+            position: relative;
+
+            display: flex;
+            flex: 1;
+            flex-wrap: wrap;
+
+            justify-content: center;
+            align-items: center;
+
+            gap: 8px;
+            margin-top: 8px;
+        }
+
+
+        /* Các badge kỹ năng mềm */
+        & .softSkills_badge {
+            height: 36px;
+            width: 244px;
+
+            border: 1px solid var(--p-100);
+            border-radius: 24px;
+            background-color: white;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: var(--caption-font-size);
+            font-weight: 600;
+            text-transform: capitalize;
+
+            /* Định vị badge độc lập với bố cục Flexbox */
+            position: absolute;
+
+
+            /* Chữ bên trong badge */
+            & p {
+                background: var(--main-gradient-color);
+                color: transparent;
+                background-clip: text;
+            }
+
+
+            /* Badge thứ nhất */
+            &:nth-child(1) {
+                top: 20%;
+                left: 10%;
+                transform: rotate(-2deg);
+            }
+
+            /* Badge thứ hai */
+            &:nth-child(2) {
+                bottom: 10%;
+                left: 20%;
+                transform: rotate(2deg);
+            }
+
+            /* Badge thứ ba */
+            &:nth-child(3) {
+                top: 25%;
+                right: 20%;
+                transform: rotate(-2deg);
+            }
+
+            /* Badge thứ tư */
+            &:nth-child(4) {
+                bottom: 10%;
+                right: 5%;
+                transform: rotate(2deg);
+            }
+        }
+
+
+        /* Khung chứa các hình ảnh quyển sách */
+        & .softSkills__book_icons {
+            position: relative;
+
+            height: 100%;
+            width: 100%;
+
+
+            /* Thiết lập chung cho hình ảnh quyển sách */
+            & img {
+                height: 40px;
+                width: 40px;
+
+                position: absolute;
+
+
+                /* Quyển sách thứ nhất */
+                &:nth-child(1) {
+                    top: 20px;
+                    left: 50px;
+                    transform: scaleX(-1) translateY(5px);
+                }
+
+                /* Quyển sách thứ hai */
+                &:nth-child(2) {
+                    top: 40%;
+                    left: 45%;
+                    transform: rotate(120deg);
+                }
+
+                /* Quyển sách thứ ba */
+                &:nth-child(3) {
+                    top: 10%;
+                    right: 20%;
+                }
+
+                /* Quyển sách thứ tư */
+                &:nth-child(4) {
+                    bottom: 20%;
+                    right: 5%;
+                    transform: rotate(-40deg);
+                }
+            }
+        }
+    }
+
+
+    /* -------------------------------------------------
+       ITEM 4 - HÌNH ẢNH MÈO
+    ------------------------------------------------- */
+
+    &:nth-child(4) {
+        background: url("../../assets/cat3.jpeg") center / cover no-repeat;
+        border: none;
+
+        /* Đổi ảnh khi người dùng di chuột vào */
+        &:hover {
+            background-image: url("../../assets/cat2.jpeg");
+        }
+    }
+}
